@@ -33,7 +33,7 @@ Add a reference to the class .dll in your project. For convenience, also add the
 	sCmd.waitAfter = "OK";
 	sCmd.onSuccess = () =>
 	{
-		MessageBox.Show(sCmd.instance.response.text);
+		MessageBox.Show(mySerial.response.text);
 	};
 	sCmd.onFail = () =>
 	{
