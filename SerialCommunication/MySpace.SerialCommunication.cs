@@ -10,9 +10,9 @@ namespace MySpace.SerialCommunication
 {
     public class SerialCommunication
     {
-        public SerialCommunication(SerialPort p)
+        public SerialCommunication()
         {
-            port = p;
+            port = new System.IO.Ports.SerialPort();
             commands = new List<serialCommand>();
             response = new serialResponse(this);
             sendDelay = 5;
@@ -53,7 +53,7 @@ namespace MySpace.SerialCommunication
                 _port.Handshake = Handshake.None;
                 _port.RtsEnable = false;
                 _port.DtrEnable = false;
-                _port.NewLine = "\r\n";
+                _port.NewLine = "\r";
                 _port.DataReceived += new SerialDataReceivedEventHandler(onSerialDataReceived);
             }
         }

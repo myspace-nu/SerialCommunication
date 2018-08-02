@@ -12,7 +12,7 @@ Add a reference to the class .dll in your project. For convenience, also add the
 
 	SerialCommunication mySerial;
 	// ...
-	mySerial = new SerialCommunication(serialPort1); // Create a new instance and bind it to serialPort1
+	mySerial = new SerialCommunication();
 	mySerial.port.BaudRate = 57600; // Set port properties
 	mySerial.onDataReceived = () =>
 	{
@@ -100,3 +100,5 @@ Add a reference to the class .dll in your project. For convenience, also add the
 **bytes** - The response as byte array (*byte[]*)
 
 **responseTime** - The time in milliseconds it took to for the serial command to complete. (*long*)
+
+**clear()** - Method used to clear the response buffer (*void method*)
